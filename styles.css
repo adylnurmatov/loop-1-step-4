@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #cfd9df, #e2ebf0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    font-size: 12px;
+}
+
+.chat-container {
+    width: 380px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.close-btn:hover {
+    background-color: lightgray;
+}
+
+.chat-messages {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.received {
+    justify-content: flex-start;
+}
+
+.sent {
+    justify-content: flex-end;
+}
+
+.message p {
+    background-color: #f1f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.sent p {
+    background-color: #e1ffc7;
+}
+
+.blocked {
+    justify-content: flex-end;
+}
+
+
+.blocked p {
+    background-color: #ffcccc; 
+    color: #e74c3c;
+    font-weight: bold;
+    border-radius: 10px; 
+    padding: 10px;
+    text-align: center;
+    max-width: 70%;
+}
+
+.time {
+    font-size: 12px;
+    color: #888;
+    margin: 0 5px;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+
+    margin-right: 10px;
+}
+
+.chat-input button {
+    background-color: white;
+    color: #4a90e2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.date-label {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin: 10px 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.date-label::before,
+.date-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+}
+
+.date-label::before {
+    left: 0;
+}
+
+.date-label::after {
+    right: 0;
+}
